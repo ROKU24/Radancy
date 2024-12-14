@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Citizens Bank - Careers</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Mobile-first styles */
+        .header {
+            padding: 15px;
+            background: #fff;
+        }
+
+        .logo {
+            max-width: 150px;
+            height: auto;
+        }
+
+        .main-content {
+            padding: 20px;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .hero-image {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        .investment-section {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .investment-section h1 {
+            color: #007B5F;
+            font-size: 1.5em;
+            margin-bottom: 15px;
+        }
+
+        .investment-section p {
+            margin-bottom: 20px;
+            padding: 0 15px;
+        }
+
+        .view-careers-btn {
+            display: inline-block;
+            background: #FF6B00;
+            color: white;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 4px;
+            margin: 10px 0;
+            width: 100%;
+            text-align: center;
+            max-width: 300px;
+        }
+
+        .citizens-advantage {
+            margin: 30px 0;
+        }
+
+        .citizens-advantage h2 {
+            color: #007B5F;
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 1.4em;
+        }
+
+        .feature {
+            margin-bottom: 30px;
+            padding: 0 15px;
+        }
+
+        .feature h3 {
+            color: #007B5F;
+            margin-bottom: 10px;
+            font-size: 1.2em;
+        }
+
+        .learn-more {
+            color: #007B5F;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+        .horizontal-line {
+            border-top: 3px solid green;
+            width: 10%;
+            margin: 0 auto;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            margin: 30px 0;
+        }
+
+        .testimonial {
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .testimonial img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+        }
+
+        .testimonial-quote {
+            font-style: italic;
+            margin-bottom: 10px;
+            padding: 0 20px;
+        }
+
+        .testimonial-author {
+            color: #007B5F;
+            font-size: 0.9em;
+        }
+
+        /* Bank Footprint Section */
+        .bank-footprint {
+            background: #f5f9f8;
+            margin-top: 40px;
+            padding: 0;
+        }
+
+        .footprint-header {
+            background: #007B5F;
+            color: white;
+            padding: 15px 20px;
+            text-align: center;
+        }
+
+        .footprint-header h2 {
+            margin: 0;
+            font-size: 1.2em;
+            font-weight: normal;
+        }
+
+        .footprint-content {
+            padding: 20px;
+            font-size: 0.9em;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Footer */
+        .footer {
+            background: #007B5F;
+            color: white;
+            padding: 30px 20px;
+            font-size: 0.9em;
+            margin-top: 40px;
+        }
+
+        .footer p {
+            margin-bottom: 15px;
+        }
+
+        .social-links {
+            margin-top: 20px;
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+        }
+
+        .social-links a {
+            color: white;
+            text-decoration: none;
+            padding: 5px;
+        }
+
+        /* Features Grid with vertical line */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin-top: 30px;
+            position: relative;
+        }
+
+        /* Vertical lines between specific sections */
+        .features-grid .section-1-2 {
+            position: relative;
+        }
+
+        .features-grid .section-1-2::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 1px;
+            height: 100%;
+            background: #ad0000;
+        }
+
+        .features-grid .section-3-4 {
+            position: relative;
+        }
+
+        .features-grid .section-3-4::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 1px;
+            height: 100%;
+            background: #333;
+        }
+
+        /* Mobile-first adjustments */
+        @media (max-width: 767px) {
+            .features-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            /* Remove vertical lines on mobile */
+            .features-grid .section-1-2::after,
+            .features-grid .section-3-4::after {
+                content: none;
+            }
+
+            /* Add horizontal line below each section in mobile */
+            .features-grid .section-1-2,
+            .features-grid .section-3-4 {
+                border-bottom: 2px solid #333;
+            }
+        }
+
+        /* Desktop styles */
+        @media (min-width: 768px) {
+            .features-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 30px;
+                margin-top: 30px;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .hero {
+                padding: 60px 40px;
+            }
+
+            .investment-section h1 {
+                font-size: 2em;
+            }
+
+            .feature h3 {
+                font-size: 1.4em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <img src="/api/placeholder/150/40" alt="Citizens Bank Logo" class="logo">
+    </header>
+
+    <main class="main-content">
+        <section class="hero">
+            <img src="/api/placeholder/400/300" alt="Mortgage Loan Officer" class="hero-image">
+        </section>
+
+        <section class="investment-section">
+            <h1>Our investment in you.</h1>
+            <p>As a Mortgage Loan Officer with Citizens, you'll work directly with your customers, walking them through
+                our unique product suite. You'll enjoy the offerings of a larger bank, along with the entrepreneurial
+                spirit and growth of a smaller lender.</p>
+            <a href="#" class="view-careers-btn">View Careers</a>
+        </section>
+
+        <section class="citizens-advantage">
+            <h2>Get the Citizens advantage.</h2>
+            <hr class="horizontal-line" />
+
+
+
+            <div class="features-grid">
+                <div class="feature">
+                    <h3>Unique products</h3>
+                    <p>Our loan programs offer a variety of solutions to help you compete effectively across a broad
+                        spectrum of borrowers. With our strong balance sheet, we can offer great conventional and
+                        portfolio loan products that give you a competitive edge.</p>
+                    <a href="#" class="learn-more">Learn more about our products ›</a>
+                </div>
+
+                <div class="feature">
+                    <h3>Exceptional support</h3>
+                    <p>We'll support you in generating leads and marketing, as well as implementing technology and
+                        secondary marketing. Our Lead Advantage program reaches prospects in the market for a mortgage,
+                        while our loyalty mail program will keep you in touch with current customers.</p>
+                </div>
+
+                <div class="feature">
+                    <h3>Closing on-time, every time</h3>
+                    <p>We expanded our regional operations centers to help to support you and take care of paperwork
+                        during closing time. Our one-team "pod" operations approach helps you create satisfied customers
+                        and referral sources.</p>
+                </div>
+
+                <div class="feature">
+                    <h3>You'll have a voice</h3>
+                    <p>In order to give our customers the best service, we'll give you a real voice in how we operate.
+                        Through our Sales Advisory Board, Sales Conference, and our Top Producers Council, you can drive
+                        real change in the company.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="bank-footprint">
+            <div class="footprint-header">
+                <h2>Citizens Bank and Citizens One Home Loans</h2>
+
+            </div>
+            <div class="footprint-content">
+                <p>The Home Lending Solutions division operates under the Citizens Bank brand within our banking
+                    footprint: Massachusetts, Rhode Island, Connecticut, New Hampshire, Vermont, New York, New Jersey,
+                    Pennsylvania, Delaware, Ohio and Michigan. Outside of this footprint, we market our home lending
+                    products under the Citizens One Home Loans brand and actively recruit loan officers in the following
+                    states: Illinois, Indiana, Kentucky, Maryland, Virginia, North Carolina and South Carolina, as well
+                    as in Washington, D.C.</p>
+            </div>
+        </section>
+
+        <section class="testimonials">
+            <div class="testimonial">
+                <img src="/api/placeholder/120/120" alt="Ed">
+                <p class="testimonial-quote">"Citizens Bank is in a growth mode. We're planning to be around for the
+                    long term and we're proving that by growing sales."</p>
+                <p class="testimonial-author">- Ed, Mortgage Loan Officer in Buffalo</p>
+            </div>
+
+            <div class="testimonial">
+                <img src="/api/placeholder/120/120" alt="Mark">
+                <p class="testimonial-quote">"The senior management is very committed to the mortgage lending business
+                    on every level - from the top down. We're all going in the same direction and that's what I like."
+                </p>
+                <p class="testimonial-author">- Mark, Senior Mortgage Loan Officer in Chicago</p>
+            </div>
+
+            <div class="testimonial">
+                <img src="/api/placeholder/120/120" alt="John">
+                <p class="testimonial-quote">"It is so great to be part of an organization that is looking for solutions
+                    and creativity versus creating barriers that cause problems."</p>
+                <p class="testimonial-author">- John, Mortgage Loan Officer in Charleston</p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="social-links">
+                <a href="#">Facebook</a>
+                <a href="#">Twitter</a>
+                <a href="#">LinkedIn</a>
+                <a href="#">YouTube</a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
